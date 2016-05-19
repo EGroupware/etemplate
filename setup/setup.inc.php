@@ -45,10 +45,10 @@ $setup_info['etemplate']['depends'][] = array(
 // TranslationTools aka developer_tools now contained in etemplate
 $setup_info['developer_tools']['name']      = 'developer_tools';
 $setup_info['developer_tools']['title']     = 'TranslationTools';
-$setup_info['developer_tools']['version']   = '14.1';
+$setup_info['developer_tools']['version']   = '14.3';
 $setup_info['developer_tools']['app_order'] = 61;
 $setup_info['developer_tools']['enable']    = 1;
-$setup_info['developer_tools']['index']     = 'etemplate.uilangfile.index';
+$setup_info['developer_tools']['index']     = 'developer_tools.uilangfile.index';
 $setup_info['developer_tools']['icon']      = 'translationtools';
 $setup_info['developer_tools']['icon_app']  = 'etemplate';
 
