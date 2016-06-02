@@ -131,8 +131,8 @@ function selectbox_add_option(id,label,value,do_onchange)
 	if (selectBox.onchange && do_onchange) selectBox.onchange();
 
 	// If chosen is loaded, trigger update
-	if(selectBox && $j().chosen) {
-		$j(selectBox).trigger("liszt:updated");
+	if(selectBox && jQuery().chosen) {
+		jQuery(selectBox).trigger("liszt:updated");
 	}
 }
 
