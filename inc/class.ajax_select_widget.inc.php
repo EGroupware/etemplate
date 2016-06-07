@@ -238,7 +238,7 @@ class ajax_select_widget
 			}
 		}
 		$options = json_encode($options);
-		$GLOBALS['egw']->js->set_onload("if(!options) {
+		egw_framework::set_onload("if(!options) {
 				var options = new Object();
 			}\n
 			options['$name'] = $options;
