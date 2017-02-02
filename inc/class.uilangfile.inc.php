@@ -46,7 +46,7 @@ class uilangfile
 
 	function __construct()
 	{
-		$this->template = new Template(EGW_SERVER_ROOT.'/etemplate/templates/default');
+		$this->template = new Template(EGW_SERVER_ROOT.'/etemplate/templates/default', 'keep');
 		$this->template->egroupware_hack = False;	// else the phrases got translated
 		$this->bo = new bolangfile();
 		$this->nextmatchs = new nextmatchs();
