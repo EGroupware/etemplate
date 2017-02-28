@@ -296,6 +296,9 @@ class etemplate extends boetemplate
 
 		egw_framework::validate_file('/etemplate/js/etemplate.js');
 
+		// calling desctructor here explicit, as it otherwise get NOT always called :(
+		self::$request->__destruct();
+
 		//echo '<p>'.__METHOD__."($method,...) etemplate[hooked]=".(int)self::$hooked.", etemplate[hook_app]='".self::$hook_app."', isset(etemplate[content])=".(int)isset(self::$previous_content)."</p>\n";
 		if (!$this->sitemgr)
 		{
