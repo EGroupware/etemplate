@@ -295,6 +295,7 @@ class etemplate extends boetemplate
 			//echo "to_process="; _debug_array(self::$request->to_process);
 
 		egw_framework::validate_file('/etemplate/js/etemplate.js');
+		egw_framework::validate_file('/api/js/egw_json.js');
 
 		//echo '<p>'.__METHOD__."($method,...) etemplate[hooked]=".(int)self::$hooked.", etemplate[hook_app]='".self::$hook_app."', isset(etemplate[content])=".(int)isset(self::$previous_content)."</p>\n";
 		if (!$this->sitemgr)
