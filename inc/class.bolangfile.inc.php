@@ -103,6 +103,7 @@ class bolangfile
 	{
 		/* _debug_array($this->source_langarray);exit; */
 		if (empty($entry['content'])) $entry['content'] = $entry['message_id'];
+		if (empty($entry['message_id'])) $entry['message_id'] = $entry['content'];
 
 		$mess_id = strtolower(trim($entry['message_id']));
 		$this->source_langarray[$mess_id] = array(

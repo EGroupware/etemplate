@@ -192,7 +192,7 @@ class solangfile
 		{
 			if (@is_dir($fd.$fn.SEP))
 			{
-				if (($fn!='.')&&($fn!='..')&&($fn!='CVS') && $fn != '.svn')
+				if (($fn!='.')&&($fn!='..')&&($fn!='CVS') && $fn != '.svn' && $fn != '.git')
 				{
 					$this->parse_php_app($app,$fd.$fn.SEP);
 				}
