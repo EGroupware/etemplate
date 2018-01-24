@@ -403,8 +403,7 @@ class nextmatch_widget
 			if ($value['lettersearch'])
 			{
 				$lettersearch =& $nextmatch->get_widget_by_name('lettersearch');	// hbox for the letters
-				if (($alphabet = lang('alphabet')) == 'alphabet*') $alphabet = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z';
-				$alphabet = explode(',',$alphabet);
+				$alphabet = array_combine($a = preg_split('//u', lang('ABCDEFGHIJKLMNOPQRSTUVWXYZ')), $a);
 				$alphabet['all'] = lang('all');
 				foreach($alphabet as $key => $letter)
 				{
