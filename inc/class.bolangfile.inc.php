@@ -48,31 +48,31 @@ class bolangfile
 			$target = &$this->target_langarray;
 		}
 		if($this->debug) { echo '<br>Save:'; _debug_array($source); }
-		$GLOBALS['egw']->session->appsession('developer_source_lang','developer_tools',$source);
+		egw_session::appsession('developer_source_lang','developer_tools',$source);
 		if($this->debug) { echo '<br>Save:'; _debug_array($target); }
-		$GLOBALS['egw']->session->appsession('developer_target_lang','developer_tools',$target);
-		$GLOBALS['egw']->session->appsession('developer_source_file','developer_tools',$this->src_file);
-		$GLOBALS['egw']->session->appsession('developer_target_file','developer_tools',$this->tgt_file);
-		$GLOBALS['egw']->session->appsession('developer_t_lang','developer_tools',$this->tgt_lang);
-		$GLOBALS['egw']->session->appsession('developer_loaded_apps','developer_tools',$this->loaded_apps);
-		$GLOBALS['egw']->session->appsession('developer_src_apps','developer_tools',$this->src_apps);
-		$GLOBALS['egw']->session->appsession('developer_missing_lang','developer_tools',$this->missing_langarray);
+		egw_session::appsession('developer_target_lang','developer_tools',$target);
+		egw_session::appsession('developer_source_file','developer_tools',$this->src_file);
+		egw_session::appsession('developer_target_file','developer_tools',$this->tgt_file);
+		egw_session::appsession('developer_t_lang','developer_tools',$this->tgt_lang);
+		egw_session::appsession('developer_loaded_apps','developer_tools',$this->loaded_apps);
+		egw_session::appsession('developer_src_apps','developer_tools',$this->src_apps);
+		egw_session::appsession('developer_missing_lang','developer_tools',$this->missing_langarray);
 	}
 
 	function read_sessiondata()
 	{
-		$source = $GLOBALS['egw']->session->appsession('developer_source_lang','developer_tools');
+		$source = egw_session::appsession('developer_source_lang','developer_tools');
 		if($this->debug) { echo '<br>Read:'; _debug_array($source); }
 
-		$target = $GLOBALS['egw']->session->appsession('developer_target_lang','developer_tools');
+		$target = egw_session::appsession('developer_target_lang','developer_tools');
 		if($this->debug) { echo '<br>Read:'; _debug_array($target); }
 
-		$src_file = $GLOBALS['egw']->session->appsession('developer_source_file','developer_tools');
-		$tgt_file = $GLOBALS['egw']->session->appsession('developer_target_file','developer_tools');
-		$tgt_lang = $GLOBALS['egw']->session->appsession('developer_t_lang','developer_tools');
-		$loaded_apps = $GLOBALS['egw']->session->appsession('developer_loaded_apps','developer_tools');
-		$src_apps = $GLOBALS['egw']->session->appsession('developer_src_apps','developer_tools');
-		$missing = $GLOBALS['egw']->session->appsession('developer_missing_lang','developer_tools');
+		$src_file = egw_session::appsession('developer_source_file','developer_tools');
+		$tgt_file = egw_session::appsession('developer_target_file','developer_tools');
+		$tgt_lang = egw_session::appsession('developer_t_lang','developer_tools');
+		$loaded_apps = egw_session::appsession('developer_loaded_apps','developer_tools');
+		$src_apps = egw_session::appsession('developer_src_apps','developer_tools');
+		$missing = egw_session::appsession('developer_missing_lang','developer_tools');
 
 		$this->set_sessiondata($source,$target,$src_file,$tgt_file,$tgt_lang,$loaded_apps,$src_apps,$missing);
 	}
@@ -91,12 +91,12 @@ class bolangfile
 
 	function clear_sessiondata()
 	{
-		$GLOBALS['egw']->session->appsession('developer_source_lang','developer_tools','');
-		$GLOBALS['egw']->session->appsession('developer_target_lang','developer_tools','');
-		$GLOBALS['egw']->session->appsession('developer_source_file','developer_tools','');
-		$GLOBALS['egw']->session->appsession('developer_target_file','developer_tools','');
-		$GLOBALS['egw']->session->appsession('developer_t_lang','developer_tools','');
-		$GLOBALS['egw']->session->appsession('developer_loaded_apps','developer_tools','');
+		egw_session::appsession('developer_source_lang','developer_tools','');
+		egw_session::appsession('developer_target_lang','developer_tools','');
+		egw_session::appsession('developer_source_file','developer_tools','');
+		egw_session::appsession('developer_target_file','developer_tools','');
+		egw_session::appsession('developer_t_lang','developer_tools','');
+		egw_session::appsession('developer_loaded_apps','developer_tools','');
 	}
 
 	function addphrase($entry)

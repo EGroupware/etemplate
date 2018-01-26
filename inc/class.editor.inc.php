@@ -108,7 +108,7 @@ class editor
 	{
 		$this->etemplate = new etemplate();
 
-		$this->extensions = $GLOBALS['egw']->session->appsession('extensions','etemplate');
+		$this->extensions = egw_session::appsession('extensions','etemplate');
 	}
 
 	function export_xml(&$xml,&$xml_label)
@@ -743,21 +743,21 @@ class editor
 		{
 			case 'paste':
 			case 'swap':
-				$clipboard = $GLOBALS['egw']->session->appsession('clipboard','etemplate');
+				$clipboard = egw_session::appsession('clipboard','etemplate');
 				if (!is_array($clipboard))
 				{
 					return lang('nothing in clipboard to paste !!!');
 				}
 				if ($action == 'swap')
 				{
-					$GLOBALS['egw']->session->appsession('clipboard','etemplate',$content['cell']);
+					egw_session::appsession('clipboard','etemplate',$content['cell']);
 				}
 				$content['cell'] = $clipboard;
 				break;
 
 			case 'copy':
 			case 'cut':
-				$GLOBALS['egw']->session->appsession('clipboard','etemplate',$content['cell']);
+				egw_session::appsession('clipboard','etemplate',$content['cell']);
 				if ($action != 'cut')
 				{
 					return lang('widget copied into clipboard');
@@ -1622,10 +1622,10 @@ class editor
 			}
 		}
 		// store the information in the session, our constructor loads it from there
-		$GLOBALS['egw']->session->appsession('extensions','etemplate',$this->extensions);
-		$apps_loaded = $GLOBALS['egw']->session->appsession('apps_loaded','etemplate');
+		egw_session::appsession('extensions','etemplate',$this->extensions);
+		$apps_loaded = egw_session::appsession('apps_loaded','etemplate');
 		$apps_loaded[$app] = true;
-		$GLOBALS['egw']->session->appsession('apps_loaded','etemplate',$apps_loaded);
+		egw_session::appsession('apps_loaded','etemplate',$apps_loaded);
 		//_debug_array($this->extensions); _debug_array($apps_loaded);
 
 		return implode(', ',$labels);

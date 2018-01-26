@@ -147,9 +147,9 @@ class etemplate extends boetemplate
 
 		if (($this->innerWidth = (int) $_POST['innerWidth']))
 		{
-			$GLOBALS['egw']->session->appsession('innerWidth','etemplate',$this->innerWidth);
+			egw_session::appsession('innerWidth','etemplate',$this->innerWidth);
 		}
-		elseif (!($this->innerWidth = (int) $GLOBALS['egw']->session->appsession('innerWidth','etemplate')))
+		elseif (!($this->innerWidth = (int) egw_session::appsession('innerWidth','etemplate')))
 		{
 			$this->innerWidth = 1018;	// default width for an assumed screen-resolution of 1024x768
 		}
