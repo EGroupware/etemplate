@@ -288,7 +288,9 @@ class etemplate extends boetemplate
 			html::input_hidden(array(
 				'submit_button' => '',
 				'innerWidth'    => '',
-			),'',false),array(),$this->sitemgr ? '' : '/etemplate/process_exec.php?menuaction='.$method,
+			),'',false),array(),$this->sitemgr ? '' : '/etemplate/process_exec.php?menuaction='.$method.
+				// if url contains cd=yes/no, keep it, as otherwise framework might reload popups opened as main page
+				(!empty($_GET['cd'])&&in_array($_GET['cd'],array('yes','no'))?'&cd='.$_GET['cd'] : ''),
 			'',self::$name_form,self::$form_options.
 			// dont set the width of popups!
 			($output_mode != 0 ? '' : ' onsubmit="this.innerWidth.value=window.innerWidth ? window.innerWidth : document.body.clientWidth;"'));
@@ -875,7 +877,7 @@ class etemplate extends boetemplate
 					unset($row_data[$col]);	// omit empty/disabled cells if only one row
 					continue;
 				}
-				if (strlen($cell['onclick']) > 1)
+				if (!empty($cell['onclick']) && strlen($cell['onclick']) > 1)
 				{
 					$onclick = $cell['onclick'];
 					if (strpos($onclick,'$') !== false || $onclick[0] == '@')
@@ -884,7 +886,7 @@ class etemplate extends boetemplate
 					}
 					$row_data[".$col"] .= ' onclick="'.$this->js_pseudo_funcs($onclick,$cname).'"' .self::get_id('',$cell['name'],$cell['id']);
 				}
-				$colspan = $span == 'all' ? $grid['cols']-$c : 0+$span;
+				$colspan = $span == 'all' ? $grid['cols']-$c : (int)$span;
 				if ($colspan > 1)
 				{
 					$row_data[".$col"] .= " colspan=\"$colspan\"";
@@ -1594,9 +1596,9 @@ class etemplate extends boetemplate
 					$enhance = ($c_options[7] == '1' || $c_options[7] == 'true');
 				}
 
-				if (!empty($multiple) && 0+$multiple <= 0)
+				if (!empty($multiple) && (int)$multiple <= 0)
 				{
-					$sels[''] = $multiple < 0 ? 'all' : $multiple;
+					$sels[''] = (int)$multiple < 0 ? 'all' : $multiple;
 					// extra-option: no_lang=0 gets translated later and no_lang=1 gets translated too (now), only no_lang>1 gets not translated
 					if ((int)$cell['no_lang'] == 1)
 					{
