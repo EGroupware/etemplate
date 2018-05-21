@@ -93,6 +93,9 @@ class db_tools
 		'percent' => '0 - 100',
 		'cfname' => 'custom field name',
 		'cfvalue' => 'custom field value',
+		'json' => 'json serialized',
+		'json-php-serialized' => 'json or php serialized',
+		'serialize' => 'php serialized',
 	);
 
 	/**
