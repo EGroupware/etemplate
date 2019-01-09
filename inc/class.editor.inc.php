@@ -1199,10 +1199,9 @@ class editor
 
 		if (is_array($content))
 		{
-			foreach(array('save','apply','cancel','goto','goto2','edit_menu','box_menu','row_menu','column_menu') as $n => $name)
+			foreach(array('save','apply','cancel','goto','goto2','edit_menu','box_menu','row_menu','column_menu','') as $n => $name)
 			{
 				if (($action = $content[$name] ? ($n < 5 ? $name : $content[$name]) : false)) break;
-				$name = '';
 			}
 			unset($content[$name]);
 
