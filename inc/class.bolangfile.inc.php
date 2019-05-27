@@ -155,7 +155,7 @@ class bolangfile
 
 		if (!is_array($this->extra_langarray['common']))
 		{
-			$this->extra_langarray['common'] = $this->so->load_app('phpgwapi',$userlang);
+			$this->extra_langarray['common'] = $this->so->load_app('api',$userlang);
 		}
 		$plist = $this->so->missing_app($app = trim($app),$userlang);
 

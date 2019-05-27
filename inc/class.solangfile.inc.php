@@ -183,6 +183,19 @@ class solangfile
 		}
 	}
 
+	function xet_file($app, $fname)
+	{
+		$matches = null;
+		if (($content = file_get_contents($fname)) &&
+			preg_match_all('/(<label[^>]+value|label|statustext)="([^"]+)"/', $content, $matches, PREG_PATTERN_ORDER))
+		{
+			foreach($matches[2] as $label)
+			{
+				$this->plist[$label] = $app;
+			}
+		}
+	}
+
 	function parse_php_app($app,$fd)
 	{
 		$reg_expr = '/('.implode('|',array_keys($this->functions)).")[ \t]*\([ \t]*(.*)$/i";
@@ -213,6 +226,11 @@ class solangfile
 				if (isset($this->files[$fn]))
 				{
 					$this->special_file($app,$fd.$fn,$this->files[$fn]);
+				}
+				if (substr($fn, -4) == '.xet')
+				{
+					$this->xet_file($app, $fd.$fn);
+					continue;
 				}
 				if (strpos($fn,'.php') === False && strpos($fn,'.js') === False)
 				{
