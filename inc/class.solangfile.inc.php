@@ -187,9 +187,9 @@ class solangfile
 	{
 		$matches = null;
 		if (($content = file_get_contents($fname)) &&
-			preg_match_all('/(<label[^>]+value|label|statustext)="([^"]+)"/', $content, $matches, PREG_PATTERN_ORDER))
+			preg_match_all('/(<(label|description)[^>]+value|label|statustext)="([^"]+)"/', $content, $matches, PREG_PATTERN_ORDER))
 		{
-			foreach($matches[2] as $label)
+			foreach($matches[3] as $label)
 			{
 				$this->plist[$label] = $app;
 			}
