@@ -187,11 +187,17 @@ class solangfile
 	{
 		$matches = null;
 		if (($content = file_get_contents($fname)) &&
-			preg_match_all('/(<(label|description)[^>]+value|label|statustext)="([^"]+)"/', $content, $matches, PREG_PATTERN_ORDER))
+			preg_match_all('#((<(label|description)[^>]+value|label|statustext)="([^"]+)"|<option[^>]*>(.*)</option>)#', $content, $matches, PREG_PATTERN_ORDER))
 		{
-			foreach($matches[3] as $label)
+			foreach(array_diff(array_merge($matches[4], $matches[5]), ['']) as $label)
 			{
-				$this->plist[$label] = $app;
+				foreach(preg_match_all('/{([^}]+)}/', $label, $matches, PREG_PATTERN_ORDER) ? $matches[1] : [$label] as $label)
+				{
+					if (!preg_match('/^(\$|@|[( :%s)0-9-]+$)/', $label))	// blacklist variables and other unwanted stuff as numbers
+					{
+						$this->plist[$label] = $app;
+					}
+				}
 			}
 		}
 	}

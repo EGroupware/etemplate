@@ -24,24 +24,23 @@
 <!-- END detail -->
 
 <!-- BEGIN prefooter -->
-</table>
-<br>
-<table width="90%" align="center">
+
 <!-- END prefooter -->
 
 <!-- BEGIN footer -->
 </tr>
-</table>
-<table width="90%" align="center">
   <tr valign="top">
     <td align="center">
      <input name="app_name"  type="hidden" value="{app_name}">
      <input name="sourcelang"  type="hidden" value="{sourcelang}">
      <input name="targetlang"  type="hidden" value="{targetlang}">
-     <input type="submit" name="update" value="{lang_update}">
-    </form>
+	 <img src="{select_all}" onclick="jQuery('input[type=checkbox]').prop('checked', jQuery('input[type=checkbox]').length!=jQuery('input[type=checkbox]:checked').length);" style="cursor:pointer"/>
     </td>
-   <td align="center">
+	<td>
+	 <input type="submit" name="update" value="{lang_update}">
+    </form>
+	</td>
+   <td align="left">
    <form method="post" action="{view_link}">
     <input type="submit" name="edit" value="{lang_view}">
    </form>

@@ -215,6 +215,7 @@ class uilangfile
 		$this->template->set_var('targetlang',$targetlang);
 		$this->template->set_var('app_name',$app_name);
 		$this->template->set_var('app_title',$GLOBALS['egw_info']['apps'][$app_name]['title']);
+		$this->template->set_var('select_all', common::image('phpgwapi','check'));
 		$this->template->pfp('out','header');
 		if($sourcelang && $targetlang)
 		{
