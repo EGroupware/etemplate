@@ -12,8 +12,6 @@
 
 @import (reference) "../../../pixelegg/less/definitions.less";
 
-
-
 .redItalic, .message {
     color: red;
     font-style: italic;
@@ -58,27 +56,17 @@
     top: 16px;
     z-index: 1;
 }
-
 // Tabelle
 // Tabs
-
-.etemplate_tab row_on,
+.etemplate_tab .row_on,
 td.etemplate_tab_active:focus {
 	/*.background-color-50-gray;*/
 	border-width: 0 0 3px 0;
 	border-style: solid;
-	border-spacing: 0px;
-	/*border-color: @active_button_border_bottom;*/
-	/*.color-5-gray;*/
-
-
-
-
+	border-spacing: 0;
 }
 // Inhalte der Tabs
-.nextmatch_header {
-
-}
+.nextmatch_header {}
 .nextmatch_header select {
     width: 140px;
 }
@@ -97,16 +85,16 @@ td.etemplate_tab_active:focus {
     white-space: nowrap;
 }
 .vfsIsLink img {
-    background-image: url("images/link.png");
+    background-image: url("../../../pixelegg/images/link.svg");
     background-position: right bottom;
     background-repeat: no-repeat;
     padding-right: 8px;
 }
 .vfsIsLink img:after {
-    content: url("../../../filemanager/templates/default/images/link.png");
+    content: url("../../../pixelegg/images/link.svg");
 }
 .vfsIsBrokenLink img {
-    background-image: url("images/link_broken.png");
+    background-image: url("../default/images/link_broken.png");
     background-position: right bottom;
     background-repeat: no-repeat;
     padding-right: 8px;
@@ -136,47 +124,33 @@ button.et2_button_text {
 	padding-left: 30px;
 }
 
-
-
-
 /**
  * SEARCH / Suchen
  */
-
 // Result
 div.app_box {
-
     display: inline;
     float: left;
     min-height: 30em;
     margin: 0.3em;
     background-color: #FFF;
-
     div {display: inline; margin: 0.3em;}
 }
 
 // Single APP
 table.app_header {
-            background-color: #FFF;
-            margin: 1em;
-            /*border: 19px solid white;*/
-
-            tr {height: 1em;
-
-                td {height: 1em;}
-
-            }
-
-            td.app_icon {
-
-                img {.dimension_width_height_m;}
-
-            }
+    background-color: #FFF;
+    margin: 1em;
+    tr {height: 1em;
+        td {height: 1em;}
+    }
+    td.app_icon {
+        img {.dimension_width_height_m;}
+    }
 }
 
-
 div.more_link {
-                            color: #003075;
-                            padding: 0.3em;
-                            background-color: @egw_color_1_a;
-                            }
+    color: #003075;
+    padding: 0.3em;
+    background-color: @egw_color_1_a;
+}

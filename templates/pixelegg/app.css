@@ -55,14 +55,12 @@
   top: 16px;
   z-index: 1;
 }
-.etemplate_tab row_on,
+.etemplate_tab .row_on,
 td.etemplate_tab_active:focus {
   /*.background-color-50-gray;*/
   border-width: 0 0 3px 0;
   border-style: solid;
-  border-spacing: 0px;
-  /*border-color: @active_button_border_bottom;*/
-  /*.color-5-gray;*/
+  border-spacing: 0;
 }
 .nextmatch_header select {
   width: 140px;
@@ -82,16 +80,16 @@ td.etemplate_tab_active:focus {
   white-space: nowrap;
 }
 .vfsIsLink img {
-  background-image: url("images/link.png");
+  background-image: url("../../../pixelegg/images/link.svg");
   background-position: right bottom;
   background-repeat: no-repeat;
   padding-right: 8px;
 }
 .vfsIsLink img:after {
-  content: url("../../../filemanager/templates/default/images/link.png");
+  content: url("../../../pixelegg/images/link.svg");
 }
 .vfsIsBrokenLink img {
-  background-image: url("images/link_broken.png");
+  background-image: url("../default/images/link_broken.png");
   background-position: right bottom;
   background-repeat: no-repeat;
   padding-right: 8px;
@@ -135,7 +133,6 @@ div.app_box div {
 table.app_header {
   background-color: #FFF;
   margin: 1em;
-  /*border: 19px solid white;*/
 }
 table.app_header tr {
   height: 1em;
