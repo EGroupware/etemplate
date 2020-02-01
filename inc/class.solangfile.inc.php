@@ -301,7 +301,7 @@ class solangfile
 
 	function missing_app($app,$userlang=en,$root=EGW_SERVER_ROOT)
 	{
-		$cur_lang=$this->load_app($app,$userlang);
+		$cur_lang=$this->load_app($app,$userlang,true,$root);
 		define('SEP',filesystem_separator());
 		$fd = $root . SEP . $app . SEP;
 		$this->plist = array();
@@ -375,6 +375,7 @@ class solangfile
 		// stuff class array listing apps that are included already
 		$this->loaded_apps[$userlang]['filename']  = $fn;
 		$this->loaded_apps[$userlang]['writeable'] = $wr;
+		//error_log(__METHOD__."('$app', '$userlang', $target, '$root') filename=$fn, writable=$wr");
 
 		if (!$target) ksort($this->src_apps);
 
