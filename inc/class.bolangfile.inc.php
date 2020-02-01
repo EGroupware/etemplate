@@ -30,9 +30,11 @@ class bolangfile
 	var $src_apps = array();
 	var $tgt_file;
 	var $tgt_lang;
+	var $root = EGW_SERVER_ROOT;
 
 	function __construct()
 	{
+		//$root = '/var/lib/egroupware/translation.egroupware.org/files
 		$this->so = new solangfile();	// is now in etemplate, to not doublicate it
 	}
 
@@ -155,9 +157,9 @@ class bolangfile
 
 		if (!is_array($this->extra_langarray['common']))
 		{
-			$this->extra_langarray['common'] = $this->so->load_app('api',$userlang);
+			$this->extra_langarray['common'] = $this->so->load_app('api',$userlang,true,$this->root);
 		}
-		$plist = $this->so->missing_app($app = trim($app),$userlang);
+		$plist = $this->so->missing_app($app = trim($app),$userlang,$this->root);
 
 		foreach($plist as $p => $loc)
 		{
@@ -166,7 +168,7 @@ class bolangfile
 			{
 				if (!is_array($this->extra_langarray[$loc]))
 				{
-					$this->extra_langarray[$loc] = $this->so->load_app($loc,$userlang);
+					$this->extra_langarray[$loc] = $this->so->load_app($loc,$userlang,true,$this->root);
 					//echo "<p>loading translations for '$loc'</p>\n";
 				}
 			}
@@ -196,7 +198,7 @@ class bolangfile
 		{
 			return $this->source_langarray;
 		}
-		$this->source_langarray = $this->so->load_app($app,$userlang,False);
+		$this->source_langarray = $this->so->load_app($app,$userlang,False,$this->root);
 		$this->src_file = $this->so->src_file;
 		$this->loaded_apps = $this->so->loaded_apps;
 		$this->src_apps = $this->so->src_apps;
@@ -212,7 +214,7 @@ class bolangfile
 				return $this->target_langarray;
 			}
 		}
-		$this->target_langarray = $this->so->load_app($app,$userlang);
+		$this->target_langarray = $this->so->load_app($app,$userlang,true,$this->root);
 		$this->tgt_file = $this->so->tgt_file;
 		$this->tgt_lang = $userlang;
 		$this->loaded_apps = $this->so->loaded_apps;
@@ -224,7 +226,7 @@ class bolangfile
 		switch ($which)
 		{
 			case 'source':
-				$this->src_file = $this->so->write_file($app_name,$this->source_langarray,$userlang,$which);
+				$this->src_file = $this->so->write_file($app_name,$this->source_langarray,$userlang,$which,$this->root);
 				break;
 			case 'target':
 				// removing phrases not in the source language
@@ -234,7 +236,7 @@ class bolangfile
 				{
 					echo '<br />'. lang('Removed %1 phrases from the target language, as they are not present in the source language!',$before-$after)."\n";
 				}
-				$this->tgt_file = $this->so->write_file($app_name,$this->target_langarray,$userlang,$which);
+				$this->tgt_file = $this->so->write_file($app_name,$this->target_langarray,$userlang,$which,$this->root);
 				break;
 			default:
 				break;

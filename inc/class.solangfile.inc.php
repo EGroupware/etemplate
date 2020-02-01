@@ -299,13 +299,13 @@ class solangfile
 		$d->close();
 	}
 
-	function missing_app($app,$userlang=en)
+	function missing_app($app,$userlang=en,$root=EGW_SERVER_ROOT)
 	{
 		$cur_lang=$this->load_app($app,$userlang);
 		define('SEP',filesystem_separator());
-		$fd = EGW_SERVER_ROOT . SEP . $app . SEP;
+		$fd = $root . SEP . $app . SEP;
 		$this->plist = array();
-		$this->parse_php_app($app == 'phpgwapi' ? 'common' : $app,$fd);
+		$this->parse_php_app($app == 'phpgwapi' || $app === 'api' ? 'common' : $app,$fd);
 
 		reset($this->plist);
 		return($this->plist);
@@ -316,12 +316,12 @@ class solangfile
 	 *
 	 * @param $lang user lang variable (defaults to en)
 	 */
-	function load_app($app,$userlang='en',$target=True)
+	function load_app($app,$userlang='en',$target=True,$root=EGW_SERVER_ROOT)
 	{
 		define('SEP',filesystem_separator());
 
 		$langarray = array();
-		$fn = translation::get_lang_file($app,$userlang);
+		$fn = translation::get_lang_file($app,$userlang,$root);
 		$fd = dirname($fn);
 
 		if (@is_writeable($fn) || is_writeable($fd))
@@ -383,18 +383,18 @@ class solangfile
 		return $langarray;
 	}
 
-	function write_file($app_name,$langarray,$userlang,$which='target')
+	function write_file($app_name,$langarray,$userlang,$which='target',$root=EGW_SERVER_ROOT)
 	{
 		$to = translation::charset($userlang);
 		$from = translation::charset();
 		//echo "<p>solangfile::write_file('$app_name',,'$userlang') converting from '$from' to charset('$userlang')='$to'</p>\n";
 
-		$fn = translation::get_lang_file($app_name,$userlang);
+		$fn = translation::get_lang_file($app_name,$userlang,$root);
 		if (file_exists($fn))
 		{
 			$backup = $fn . '.old';
-			@unlink($backup);
-			@rename($fn,$backup);
+			if (file_exists($backup)) unlink($backup);
+			rename($fn,$backup);
 		}
 		$fp = fopen($fn,'wb');
 		while(list($mess_id,$data) = @each($langarray))
