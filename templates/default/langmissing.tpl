@@ -17,7 +17,7 @@
 
 <!-- BEGIN detail -->
   <tr class="{tr_class}">
-   <td align="center"><input type="checkbox" name="delete[{mess_id}]" checked></td>
+   <td align="center"><input type="checkbox" name="delete[{mess_id}]" ></td>
    <td>{transapp}</td>
    <td>{source_content}</td>
   </tr>
