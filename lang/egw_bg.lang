@@ -1,3 +1,72 @@
+add change	developer_tools	bg	Добавете промяна
+add more	developer_tools	bg	Добави още
+add new phrase	developer_tools	bg	Добавете нова фраза
+add phrase	developer_tools	bg	Добави фраза
+allows you to add a single phrase	developer_tools	bg	Позволява ви да добавите една-единствена фраза
+application	developer_tools	bg	Приложение
+back	developer_tools	bg	Назад
+cancel	developer_tools	bg	Затвори
+change	developer_tools	bg	Промени
+changelog entry has been added	developer_tools	bg	Добавен е запис за промените.
+changelogs	developer_tools	bg	Промяна на дневниците
+clears the internal buffer, all changes made sofar are lost	developer_tools	bg	Изчиства вътрешния буфер, всички направени досега промени се губят
+create new language file	developer_tools	bg	Създаване на нов езиков файл
+create sgml file	developer_tools	bg	Създаване на SGML файл
+developer tools - preferences	developer_tools	bg	Инструменти за разработчици - предпочитания
+developer_tools	common	bg	Инструменти за превод
+diary	developer_tools	bg	Дневник
+done	developer_tools	bg	Завършен
 download	developer_tools	bg	Изтегляне
-remove	developer_tools	bg	премахване
+download the lang-file to be saved in the apps setup-dir	developer_tools	bg	Изтеглете езиковия файл, който да бъде запазен в настройките за приложения
+edit	developer_tools	bg	Редактиране
+installed applications	developer_tools	bg	Инсталирани приложения
+language file management	developer_tools	bg	Управление на езикови файлове
+list changelogs	developer_tools	bg	Изберете списъци с промени
+load	developer_tools	bg	Зареждане
+loading source langfile	developer_tools	bg	Зареждане на langfile източник
+loading target langfile	developer_tools	bg	Зареждане на целевия langfile
+loads the selected lang-files, to be modified in the next steps	developer_tools	bg	Зарежда избраните lang-файлове за промяна в следващите стъпки
+message	developer_tools	bg	Съобщение
+message_id in english	developer_tools	bg	message_id на английски
+no file	developer_tools	bg	Няма файл
+ok	developer_tools	bg	Ok
+original	developer_tools	bg	Оригинал
+phrase in english (or empty if identical)	developer_tools	bg	Фраза на английски или празна, ако е идентична
+preferences	developer_tools	bg	Предпочитания
+preferences have been updated	developer_tools	bg	Предпочитанията бяха успешно актуализирани.
+project	developer_tools	bg	Проект
+remove	developer_tools	bg	Премахване
+removed %1 phrases from the target language, as they are not present in the source language!	developer_tools	bg	Премахнати %1 фрази от целевия език, тъй като те не присъстват в езиковия източник!
+returns to the application list, not saved changes get lost !!!	developer_tools	bg	Връщане в списъка с приложения, а не запазените промени се губят!
+revert	developer_tools	bg	Връщане
+saves the added/changed translations to an internal buffer, to be used in further steps	developer_tools	bg	Запазва добавените /променени преводи във вътрешен буфер, за да се използва в следващи стъпки.
+search changelogs	developer_tools	bg	Търсене на промяна на регистрационни файлове
+search for missing phrase	developer_tools	bg	Търсене на липсваща фраза
+search new phrases	developer_tools	bg	Търсене на нови фрази
+select project	developer_tools	bg	Изберете проект
+sf project tracker	developer_tools	bg	Тракер на SF проект
+sf project tracker preferences	preferences	bg	Предпочитания на Тракер на SF проект
+source language	developer_tools	bg	Езиков източник
+sourceforge project id	developer_tools	bg	Идентификационен номер (ID) на Sourceforge проекта
+sourceforge project tracker	developer_tools	bg	Тракер на Sourceforge проект
+sourceforge project tracker preferences	developer_tools	bg	Предпочитания на Тракер на Sourceforge проект
+step	developer_tools	bg	Стъпка
+submit	developer_tools	bg	Изпращане
+target language	developer_tools	bg	Целеви език
+title	developer_tools	bg	Заглавие
+translate	developer_tools	bg	Преведи
 translation	developer_tools	bg	Превод
+translation of phrase	developer_tools	bg	Превод на фразата
+update	developer_tools	bg	Актуализация
+update database	developer_tools	bg	Актуализиране на база данни
+updates the translations of both lang-files in your database, so you can verify your work immediately	developer_tools	bg	Актуализира преводите на двата lang-файла във вашата база данни, така че можете да проверите работата си веднага.
+version	developer_tools	bg	Версия
+write	developer_tools	bg	Напиши
+write the lang-file to the apps setup-dir	developer_tools	bg	Напишете lang-файла в настройките за приложения
+write to lang table	developer_tools	bg	Напишете в lang-таблицата
+writing langfile for '%1' ...	developer_tools	bg	Изписване на lang-файла  за '%1' ...
+you have to [save] every manual change in the above fields, before you can go to the next step !!!	developer_tools	bg	Трябва да запазите [Save] всяка ръчна промяна в горните полета, преди да преминете към следващата стъпка!
+you must a version	developer_tools	bg	Трябва да имате версия
+you must enter a change	developer_tools	bg	Трябва да въведете промяна.
+you must select a project	developer_tools	bg	Трябва да изберете проект.
+you need to set your preferences for this app	developer_tools	bg	Трябва да зададете предпочитанията си за това приложение!
