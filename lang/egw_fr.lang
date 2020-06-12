@@ -1,3 +1,7 @@
+#	etemplate	fr	#
+%s selection #1 or	etemplate	fr	%s sélection #1 ou
+%s selection #2	etemplate	fr	%s sélection #2
+&gt;	etemplate	fr	>
 add change	developer_tools	fr	Ajouter la modification
 add more	developer_tools	fr	Ajouter encore
 add new phrase	developer_tools	fr	Ajouter une nouvelle phrase
@@ -12,6 +16,8 @@ changelogs	developer_tools	fr	Journaux de changements
 clears the internal buffer, all changes made sofar are lost	developer_tools	fr	Vide le tampon interne, tous les changements faits jusqu'ici sont perdus
 create new language file	developer_tools	fr	Créer un Nouveau Fichier de Langue
 create sgml file	developer_tools	fr	Créer un fichier SGML
+csv export	etemplate	fr	Export CSV
+deletes an entry	etemplate	fr	supprime une entrée
 developer tools - preferences	developer_tools	fr	Outils développeurs - préférences
 developer_tools	common	fr	Outils de traduction
 diary	developer_tools	fr	Journal
@@ -19,7 +25,11 @@ done	developer_tools	fr	fait
 download	developer_tools	fr	Télécharger
 download the lang-file to be saved in the apps setup-dir	developer_tools	fr	Télécharger le fichier de langue pour qu'il soit enregistré dans le répertoire setup de l'application
 edit	developer_tools	fr	Editer
+floatingpoint (-1.5 &lt;= x &lt;= 3.5)	etemplate	fr	Nombre décimal (-1.5 <= x <= 3.5)
+footer	etemplate	fr	Pied de page
+header	etemplate	fr	Entête
 installed applications	developer_tools	fr	Applications installées
+integer (-15 &lt;= x &lt;= 5)	etemplate	fr	Nombre entier (-15 <= x <= 5)
 language file management	developer_tools	fr	Gestion des fichiers de langue
 list changelogs	developer_tools	fr	Lister les journaux de changements
 load	developer_tools	fr	Charger
@@ -31,6 +41,7 @@ message_id in english	developer_tools	fr	message_id en Anglais
 no file	developer_tools	fr	pas de fichier
 ok	developer_tools	fr	ok
 original	developer_tools	fr	Original
+part	etemplate	fr	Partie
 phrase in english (or empty if identical)	developer_tools	fr	Phrase en  Anglais (ou rien si identique)
 preferences	developer_tools	fr	Préférences
 preferences have been updated	developer_tools	fr	Les préférences ont été mises à jour
@@ -39,7 +50,9 @@ remove	developer_tools	fr	Enlever
 removed %1 phrases from the target language, as they are not present in the source language!	developer_tools	fr	Enlevé %1 phrases de la langue de destination car elles sont absentes de la langue source!
 returns to the application list, not saved changes get lost !!!	developer_tools	fr	Retourne à la liste des applications, les changements non enregistrés seront perdus !!!
 revert	developer_tools	fr	Revenir
+row	etemplate	fr	ligne
 saves the added/changed translations to an internal buffer, to be used in further steps	developer_tools	fr	Enregistre les traductions ajoutées/modifiées dans un tampon interne afin qu'elles puissent être utilisées dans les étapes suivantes
+saves the change to the db	etemplate	fr	sauvegarde le changement dans la base de données
 search changelogs	developer_tools	fr	Chercher les journaux de changements
 search for missing phrase	developer_tools	fr	Chercher les phrases manquantes
 search new phrases	developer_tools	fr	Rechercher les nouvelles phrases
@@ -54,6 +67,8 @@ sourceforge project tracker preferences	developer_tools	fr	Préférences du trac
 step	developer_tools	fr	Etape
 submit	developer_tools	fr	Soumettre
 target language	developer_tools	fr	Langue destination
+test	etemplate	fr	Test
+this is a help message	etemplate	fr	Ceci est un message d'aide
 title	developer_tools	fr	Titre
 translate	developer_tools	fr	Traduire
 translation	developer_tools	fr	Traduction
@@ -63,6 +78,7 @@ update database	developer_tools	fr	Mettre à jour la base de données
 updates the translations of both lang-files in your database, so you can verify your work immediately	developer_tools	fr	Met à jour les traductions des deux fichiers de langue dans votre base de données, que vous puissiez vérifier votre travail immédiatement
 version	developer_tools	fr	Version
 write	developer_tools	fr	Ecrire
+write &lt;app&gt;/setup/tables_current.inc.php	etemplate	fr	Ecrire <app>/setup/tables_current.inc.php
 write the lang-file to the apps setup-dir	developer_tools	fr	Ecrit le fichier de langue dans le répertoire setup de l'application
 write to lang table	developer_tools	fr	Ecrire dans la table de langue
 writing langfile for '%1' ...	developer_tools	fr	Mise à jour fichier de langue pour  '%1' ...
