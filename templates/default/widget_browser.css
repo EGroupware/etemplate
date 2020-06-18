@@ -1,0 +1,48 @@
+/**
+ * CSS for the widget browser
+ * Api\Etemplate\WidgetBrowser.php
+ */
+
+#etemplate-widgetBrowser {position: relative;}
+
+/* Basic layout */
+#etemplate-widgetBrowser_widget_list {
+    overflow-y: scroll;
+    width: 22%;
+    height: 55%;
+}
+div#etemplate-widgetBrowser_widget_attrs {
+    width: 22%;
+    overflow-y: auto;
+    height: 45%;
+}
+#etemplate-widgetBrowser_widget_container {
+    position: absolute;
+    top: 0;
+    left: 23%;
+}
+
+#etemplate-widgetBrowser_widget_list ul {
+	list-style-type: none;
+}
+#widget_attributes {
+
+	overflow-y: auto;
+
+}
+#widget_attributes table{
+	width: 100%;
+}
+
+/* Nicer looks */
+#etemplate-widgetBrowser_widget_list li {
+	cursor:pointer;
+	padding: 0.4em;
+	font-size: 1.4em;
+	height: 16px;
+}
+button#etemplate-widgetBrowser_dtd {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
