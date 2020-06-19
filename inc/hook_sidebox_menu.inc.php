@@ -24,10 +24,6 @@ $menu_title = lang('Documentation');
 $docs = $GLOBALS['egw_info']['server']['webserver_url'].'/etemplate/doc/';
 $doc_file = Array(
 	array(
-		'text'   => 'eTemplate2 Reference',
-		'link'   => egw::link('/index.php','menuaction=etemplate.EGroupware\\etemplate\\WidgetBrowser.index&ajax=true', 'etemplate'),
-	),
-	array(
 		'text'   => 'eTemplate Tutorial',
 		'link'   => $docs.'etemplate.html',
 		'target' => 'docs'
