@@ -352,6 +352,8 @@ class etemplate extends boetemplate
 				common::egw_footer();
 			}
 		}
+		// force request distructor to run now as we do in eT2
+		self::$request = null;
 		if ($this->sitemgr || (int) $output_mode == 1 || (int) $output_mode == -1)	// return html
 		{
 			return $html;
