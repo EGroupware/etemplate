@@ -11,6 +11,8 @@
  * @version $Id$
  */
 
+use EGroupware\Api;
+
 /**
  * db-tools: creats and modifys eGroupWare schem-files (to be installed via setup)
  */
@@ -200,7 +202,7 @@ class db_tools
 			}
 			else // import
 			{
-				$oProc =& CreateObject('phpgwapi.schema_proc',$GLOBALS['egw_info']['server']['db_type']);
+				$oProc = new Api\Db\Schema($GLOBALS['egw_info']['server']['db_type']);
 				if (method_exists($oProc,'GetTableDefinition'))
 				{
 					$this->data[$this->table = $content['new_table_name']] = $oProc->GetTableDefinition($content['new_table_name']);

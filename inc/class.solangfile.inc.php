@@ -427,7 +427,7 @@ class solangfile
 /*
  * Helper functions for searching new phrases in sidebox, preferences or admin menus
  */
-if (!function_exists('display_sidebox') && $_GET['menuaction'] == 'developer_tools.uilangfile.missingphrase')
+if (!function_exists('display_sidebox') && strpos($_GET['menuaction'], '.uilangfile.') !== false)
 {
 	function display_sidebox($appname,$menu_title,$file)	// hook_sidebox_menu
 	{
@@ -444,7 +444,7 @@ if (!function_exists('display_sidebox') && $_GET['menuaction'] == 'developer_too
 		}
 	}
 }
-if (!function_exists('display_section') && $_GET['menuaction'] == 'developer_tools.uilangfile.missingphrase')
+if (!function_exists('display_section') && strpos($_GET['menuaction'], '.uilangfile.') !== false)
 {
 	function display_section($appname,$file,$file2='')		// hook_preferences, hook_admin
 	{
