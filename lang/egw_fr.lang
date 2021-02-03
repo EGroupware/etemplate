@@ -9,11 +9,16 @@ add phrase	developer_tools	fr	ajouter la phrase
 allows you to add a single phrase	developer_tools	fr	Vous permet d'ajouter une phrase
 application	developer_tools	fr	Application
 back	developer_tools	fr	Retour
+benutzer	etemplate	fr	Utilisateur
 cancel	developer_tools	fr	Annuler
 change	developer_tools	fr	Changer
 changelog entry has been added	developer_tools	fr	L'entrée a été ajoutée dans le journal des changements
 changelogs	developer_tools	fr	Journaux de changements
 clears the internal buffer, all changes made sofar are lost	developer_tools	fr	Vide le tampon interne, tous les changements faits jusqu'ici sont perdus
+click here to edit the entry	etemplate	fr	Cliquer ici pour modifier l'entrée
+col 1 header	etemplate	fr	Entêt de col 1
+col 2 header	etemplate	fr	Entêt de col 2
+col 3 header	etemplate	fr	Entêt de col 3
 create new language file	developer_tools	fr	Créer un Nouveau Fichier de Langue
 create sgml file	developer_tools	fr	Créer un fichier SGML
 csv export	etemplate	fr	Export CSV
@@ -67,6 +72,7 @@ sourceforge project tracker preferences	developer_tools	fr	Préférences du trac
 step	developer_tools	fr	Etape
 submit	developer_tools	fr	Soumettre
 target language	developer_tools	fr	Langue destination
+telefon	etemplate	fr	Téléphone
 test	etemplate	fr	Test
 this is a help message	etemplate	fr	Ceci est un message d'aide
 title	developer_tools	fr	Titre
