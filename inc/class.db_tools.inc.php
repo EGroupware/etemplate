@@ -1,14 +1,13 @@
 <?php
 /**
- * eGroupWare  eTemplates - DB-Tools
+ * EGroupware  eTemplates - DB-Tools
  *
- * @link http://www.egroupware.org
+ * @link https://www.egroupware.org
  * @author Ralf Becker <RalfBecker@outdoor-training.de>
- * @copyright 2002-13 by RalfBecker@outdoor-training.de
- * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
+ * @copyright 2002-21 by RalfBecker@outdoor-training.de
+ * @license https://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  * @package etemplate
  * @subpackage tools
- * @version $Id$
  */
 
 use EGroupware\Api;
@@ -172,11 +171,10 @@ class db_tools
 			}
 			$msg .= lang('Table unchanged, no write necessary !!!');
 		}
-		elseif ($content['delete'])
+		elseif ($content['delete'] &&
+			($key = array_search(array_values($this->data[$posted_table]['fd'])[key($content['delete'])],
+				$this->data[$posted_table]['fd'], true)) !== false)
 		{
-			list($col) = each($content['delete']);
-			@reset($this->data[$posted_table]['fd']);
-			while ($col-- > 0 && list($key) = @each($this->data[$posted_table]['fd'])) ;
 			unset($this->data[$posted_table]['fd'][$key]);
 			$this->changes[$posted_table][$key] = '**deleted**';
 		}
@@ -212,7 +210,7 @@ class db_tools
 					$oProc->m_odb = clone($GLOBALS['egw']->db);
 					$oProc->m_oTranslator->_GetColumns($oProc,$content['new_table_name'],$nul);
 
-					while (list($key,$tbldata) = each ($oProc->m_oTranslator->sCol))
+					foreach ($oProc->m_oTranslator->sCol as $tbldata)
 					{
 						$cols .= $tbldata;
 					}
@@ -515,7 +513,10 @@ class db_tools
 			}
 
 			while ((list($old_name,$old_col) = @each($old_cols)) &&
-						 $this->changes[$posted_table][$old_name] == '**deleted**') ;
+				$this->changes[$posted_table][$old_name] == '**deleted**')
+			{
+
+			}
 
 			if (($name = $col['name']) != '')		// ignoring lines without column-name
 			{
@@ -685,7 +686,7 @@ class db_tools
 				$def .= ' => ';
 			}
 			// unserialize custom meta values
-			if ($key === 'meta' && is_string($val) && (($v = @unserialize($val)) !== false || $val === serialize(false)))
+			if ($key === 'meta' && is_string($val) && (($v = @unserialize($val, ['allowed_classes'=>false])) !== false || $val === serialize(false)))
 			{
 				$val = $v;
 			}
@@ -1149,14 +1150,13 @@ function $app"."_upgrade$old_version_()
 	{
 		return '<?php
 /**
- * eGroupWare - Setup
- * http://www.egroupware.org
+ * EGroupware - Setup
+ * https://www.egroupware.org
  * Created by eTemplates DB-Tools written by ralfbecker@outdoor-training.de
  *
- * @license http://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
+ * @license https://opensource.org/licenses/gpl-license.php GPL - GNU General Public License
  * @package '. $app. '
  * @subpackage setup
- * @version $Id'.'$
  */
 ';
 	}
