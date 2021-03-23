@@ -29,7 +29,7 @@ loads the selected lang-files, to be modified in the next steps	developer_tools	
 message	developer_tools	de	Text
 message_id in english	developer_tools	de	Text-Schlüssel in Englisch
 no file	developer_tools	de	keine Datei
-ok	developer_tools	de	Ok
+ok	developer_tools	de	OK
 original	developer_tools	de	Original
 phrase in english (or empty if identical)	developer_tools	de	Text in Englisch (oder leer wenn identisch)
 preferences	developer_tools	de	Einstellungen
