@@ -122,7 +122,7 @@ class tree_widget
 		$script = html::input_hidden($name,$value,false)."<script type='text/javascript'>";
 		if (($onclick = $cell['onclick']))
 		{
-			if (strpos($onclick,'$') !== false || $onclick{0} == '@')
+			if (strpos($onclick,'$') !== false || $onclick[0] == '@')
 			{
 				$onclick = $tmpl->expand_name($onclick,$c,$r,$content['.c'],$content['.row'],$content);
 			}

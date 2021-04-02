@@ -145,11 +145,11 @@ class soetemplate
 		$min = ord('A');
 		$max = ord('Z') - $min + 1;
 
-		$num = 1+ord($chrs{0})-$min;
+		$num = 1+ord($chrs[0])-$min;
 		if (strlen($chrs) > 1)
 		{
 			$num *= 1 + $max - $min;
-			$num += 1+ord($chrs{1})-$min;
+			$num += 1+ord($chrs[1])-$min;
 		}
 		return $num;
 	}
@@ -1269,7 +1269,7 @@ class soetemplate
 		}
 		foreach($strings as $str)
 		{
-			if (strlen($str) > 1 && $str{0} != '@' && $str{0} != '$' &&
+			if (strlen($str) > 1 && $str[0] != '@' && $str[0] != '$' &&
 				strpos($str,'$row') === false && strpos($str,'$cont') === false)
 			{
 				$to_trans[trim(strtolower($str))] = $str;

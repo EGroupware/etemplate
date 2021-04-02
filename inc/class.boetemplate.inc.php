@@ -175,8 +175,8 @@ class boetemplate extends soetemplate
 				$cont = array();
 			}
 			if (!is_numeric($c)) $c = boetemplate::chrs2num($c);
-			$col = boetemplate::num2chrs($c-1);	// $c-1 to get: 0:'@', 1:'A', ...
-			$col_ = boetemplate::num2chrs($c_-1);
+			$col = boetemplate::num2chrs((int)$c-1);	// $c-1 to get: 0:'@', 1:'A', ...
+			$col_ = boetemplate::num2chrs((int)$c_-1);
 			$row_cont = $cont[$row];
 			$col_row_cont = $cont[$col.$row];
 
@@ -208,10 +208,12 @@ class boetemplate extends soetemplate
 			// check if name is assigned in an url --> urlendcode contained & as %26, as egw::link explodes it on &
 			if ($name[$pos_var-1] == '=' && preg_match('/[&?]([A-Za-z0-9_]+(\[[A-Za-z0-9_]+\])*)=('.self::PHP_VAR_PREG.')/',$name,$matches))
 			{
-				if (eval($code='$value = '.$matches[3].';') === false)
-				{
+				try {
+					eval($code='$value = "'.$matches[3].'";');
+				}
+				catch (Throwable $e) {
+					_egw_log_exception($e);
 					error_log(__METHOD__."(name='$name', c='$c', row=$row, c_='$c_', row_=$row_, ...) line ".__LINE__." ERROR parsing: $code");
-					error_log(function_backtrace());
 				}
 				if (is_array($value))	// works only reasonable, if get-parameter uses array notation, eg. &file[]=$cont[filenames]
 				{

@@ -13,6 +13,20 @@
 use EGroupware\Api;
 
 /**
+ * Polyfill for removed each function to keep old code alive
+ */
+if ((float)PHP_VERSION >= 8.0 && !function_exists('each'))
+{
+	function each(&$arr)
+	{
+		if (!is_array($arr) || key($arr) === null) return null;
+		$ret = [key($arr), current($arr)];
+		next($arr);
+		return $ret;
+	}
+}
+
+/**
  * db-tools: creats and modifys eGroupWare schem-files (to be installed via setup)
  */
 class db_tools
@@ -520,7 +534,7 @@ class db_tools
 
 			if (($name = $col['name']) != '')		// ignoring lines without column-name
 			{
-				if ($col['name'] != $old_name && $n <= count($old_cols))	// column renamed --> remeber it
+				if ($col['name'] != $old_name && is_array($old_cols) && $n <= count($old_cols))	// column renamed --> remeber it
 				{
 					$this->changes[$posted_table][$old_name] = $col['name'];
 					//echo "<p>content2table: $posted_table.$old_name renamed to $col[name]</p>\n";

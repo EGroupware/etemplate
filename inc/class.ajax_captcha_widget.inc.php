@@ -567,7 +567,7 @@ class Securimage {
    * </code>
    *
    */
-  function Securimage()
+  function __construct()
   {
      $this->gd_font_file =EGW_SERVER_ROOT.'/etemplate/templates/default/gdfonts/automatic.gdf';
 	 $this->audio_path=EGW_SERVER_ROOT.'/etemplate/templates/default/audio/';
@@ -811,7 +811,7 @@ class Securimage {
             $font_color = imagecolorallocate($this->im, "0x$r", "0x$g", "0x$b");
           }
         }
-        @imagettftext($this->im, $this->font_size, $angle, $x, $y, $font_color, $this->ttf_file, $this->code{$i});
+        @imagettftext($this->im, $this->font_size, $angle, $x, $y, $font_color, $this->ttf_file, $this->code[$i]);
 
         $x += rand($this->text_minimum_distance, $this->text_maximum_distance);
       } //for loop
@@ -852,7 +852,7 @@ class Securimage {
     $code = '';
 
     for($i = 1, $cslen = strlen($this->charset); $i <= $len; ++$i) {
-      $code .= strtoupper( $this->charset{rand(0, $cslen - 1)} );
+      $code .= strtoupper( $this->charset[rand(0, $cslen - 1)] );
     }
     return $code;
   }
@@ -943,7 +943,7 @@ class Securimage {
     }
 
     for($i = 0; $i < strlen($code); ++$i) {
-      $letters[] = $code{$i};
+      $letters[] = $code[$i];
     }
 
     return $this->generateWAV($letters);
