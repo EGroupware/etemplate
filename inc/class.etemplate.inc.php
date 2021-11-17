@@ -1288,7 +1288,7 @@ class etemplate extends boetemplate
 				}
 				else
 				{
-					if ($cell_opts[0] < 0)
+					if ((int)$cell_opts[0] < 0)
 					{
 						$cell_opts[0] = abs($cell_opts[0]);
 						$options .= ' readonly="readonly"';
