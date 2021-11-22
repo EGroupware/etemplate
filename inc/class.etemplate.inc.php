@@ -1052,8 +1052,8 @@ class etemplate extends boetemplate
 		$value = $this->get_array($content,$name);
 
 		$options = '';
-		if ($readonly = $cell['readonly'] && $readonlys[$name] !== false || 	// allow to overwrite readonly settings of a cell
-			@$readonlys[$name] && !is_array($readonlys[$name]) || $readonlys['__ALL__'] && (!is_string($name) || $readonlys[$name] !== false) ||
+		if ($readonly = $cell['readonly'] && is_string($name) && $readonlys[$name] !== false || 	// allow to overwrite readonly settings of a cell
+			is_string($name) && @$readonlys[$name] && !is_array($readonlys[$name]) || $readonlys['__ALL__'] && (!is_string($name) || $readonlys[$name] !== false) ||
 			!empty($name) && is_string($name) && ($p = strrpos($name,'[')) !== false && ($parent=substr($name,0,$p)) && $readonlys[$parent])	// allow also set parent readonly (instead each child)
 		{
 			$options .= ' readonly="readonly"';
