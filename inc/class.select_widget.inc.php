@@ -274,7 +274,7 @@ class select_widget
 					$value = $GLOBALS['egw']->uiaccountsel->selection($name,'eT_accountsel_'.str_replace(array('[','][',']'),array('_','_',''),$name),
 						$value,$type,$rows > 0 ? $rows : ($type3 ? -$type3 : 0),$not,' onfocus="'.$onFocus.'" onblur="'.$onBlur.'"'.$noPrint_class,
 						$cell['onchange'] == '1' ? 'this.form.submit();' : $cell['onchange'],
-						!empty($rows) && 0+$rows <= 0 ? lang($rows < 0 ? 'all' : $rows) : False);
+						!empty($rows) && (int)$rows <= 0 ? lang($rows < 0 ? 'all' : $rows) : False);
 					if ($cell['noprint'])
 					{
 						$value = '<span class="onlyPrint">'.$onlyPrint.'</span>'.$value;

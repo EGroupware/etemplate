@@ -185,10 +185,12 @@ class boetemplate extends soetemplate
 			// used as name for a button like "delete[$row_cont[something]]" --> quote contained quotes (' or ")
 			if (in_array($name[$pos_var-1],array('[',"'",'{')) && preg_match('/[\'\[]{?('.self::PHP_VAR_PREG.')}?[\'\]]+/',$name,$matches))
 			{
-				if (eval($code='$value = '.$matches[1].';') === false)
-				{
-					error_log(__METHOD__."(name='$name', c='$c', row=$row, c_='$c_', row_=$row_, ...) line ".__LINE__." ERROR parsing: $code");
-					error_log(function_backtrace());
+				try {
+					eval('$value = "'.str_replace('"', '\\"', $matches[1]).'";');
+				}
+				catch(\Throwable $e) {
+					error_log(__METHOD__."() eval('\$value = \"".str_replace('"', '\\"', $matches[1]) . "\";)");
+					_egw_log_exception($e);
 				}
 				if (is_array($value) && $name[$pos_var-1] == "'")	// arrays are only supported for '
 				{
@@ -209,7 +211,7 @@ class boetemplate extends soetemplate
 			if ($name[$pos_var-1] == '=' && preg_match('/[&?]([A-Za-z0-9_]+(\[[A-Za-z0-9_]+\])*)=('.self::PHP_VAR_PREG.')/',$name,$matches))
 			{
 				try {
-					eval($code='$value = "'.$matches[3].'";');
+					eval($code='$value = "'.str_replace('"', '\\"', $matches[3]).'";');
 				}
 				catch (Throwable $e) {
 					_egw_log_exception($e);
