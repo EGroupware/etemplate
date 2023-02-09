@@ -12,7 +12,16 @@
 /**
  * Handle HTML5 validation on tabs
  */
-egw_LAB.wait(function() {
+// wait for async loaded egw and other objects to "appear"
+(new Promise((_resolve) => {
+	const interval = window.setInterval(() => {
+		if (typeof window.egw_ready !== "undefined")
+		{
+			window.clearInterval(interval);
+			_resolve(window.egw_ready);
+		}
+	}, 10);
+})).then(() => {
 	jQuery().ready(function() {
 		jQuery('.tab_body :input').bind('invalid', function(e) {
 			// Activate the appropriate tab

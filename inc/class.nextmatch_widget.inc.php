@@ -904,7 +904,17 @@ class nextmatch_widget
 
 		return '
 <script type="text/javascript">
-	egw_LAB.wait(function() {jQuery(document).ready(function() {
+// wait for async loaded egw and other objects to "appear"
+(new Promise((_resolve) => {
+    const interval = window.setInterval(() => {
+        if (typeof window.egw_ready !== "undefined")
+        {
+            window.clearInterval(interval);
+            _resolve(window.egw_ready);
+        }
+    }, 10);
+})).then(() => {
+    jQuery(document).ready(() => {
 		// Initialize the action manager and add some actions to it
 		var actionManager = egw_getActionManager("'.$app.'");
 		var objectManager = egw_getObjectManager("'.$app.'");
@@ -928,12 +938,13 @@ class nextmatch_widget
 			// Create a new action object
 			if (elem.id) {
 				var obj = objectCntr.addObject(elem.id, new nextmatchRowAOI(elem, '.
-					($GLOBALS['egw_info']['user']['preferences']['common']['select_mode']?$GLOBALS['egw_info']['user']['preferences']['common']['select_mode']:'EGW_SELECTMODE_DEFAULT').'));
+					($GLOBALS['egw_info']['user']['preferences']['common']['select_mode']?:'EGW_SELECTMODE_DEFAULT').'));
 
 				obj.updateActionLinks(actionLinks);
 			}
 		});
-	})});
+	})
+});
 </script>';
 	}
 
