@@ -1,0 +1,73 @@
+add change	developer_tools	km	បន្ថែមការផ្លាស់ប្តូរ
+add more	developer_tools	km	បន្ថែម​ទៀត
+add new phrase	developer_tools	km	បន្ថែមឃ្លាថ្មី។
+add phrase	developer_tools	km	បន្ថែមឃ្លា
+allows you to add a single phrase	developer_tools	km	អនុញ្ញាតឱ្យអ្នកបន្ថែមឃ្លាតែមួយ
+application	developer_tools	km	ការដាក់ពាក្យ
+back	developer_tools	km	ត្រឡប់មកវិញ
+cancel	developer_tools	km	បោះបង់
+change	developer_tools	km	ផ្លាស់ប្តូរ
+changelog entry has been added	developer_tools	km	ធាតុ Changelog ត្រូវបានបន្ថែម។
+changelogs	developer_tools	km	កំណត់ហេតុផ្លាស់ប្តូរ
+clears the internal buffer, all changes made sofar are lost	developer_tools	km	សម្អាតសតិបណ្ដោះអាសន្នខាងក្នុង ការផ្លាស់ប្តូរទាំងអស់ដែលបានធ្វើរហូតមកដល់ពេលនេះត្រូវបានបាត់បង់
+create new language file	developer_tools	km	បង្កើតឯកសារភាសាថ្មី។
+create sgml file	developer_tools	km	បង្កើតឯកសារ SGML
+developer tools - preferences	developer_tools	km	ឧបករណ៍អ្នកអភិវឌ្ឍន៍ - ចំណូលចិត្ត
+developer_tools	common	km	ឧបករណ៍បកប្រែ
+diary	developer_tools	km	កំណត់ហេតុប្រចាំថ្ងៃ
+done	developer_tools	km	រួចរាល់
+download	developer_tools	km	ទាញយក
+download the lang-file to be saved in the apps setup-dir	developer_tools	km	ទាញយកឯកសារភាសាដែលត្រូវរក្សាទុកក្នុងកម្មវិធី setup-dir
+edit	developer_tools	km	កែសម្រួល
+installed applications	developer_tools	km	កម្មវិធីដែលបានដំឡើង
+language file management	developer_tools	km	ការគ្រប់គ្រងឯកសារភាសា
+list changelogs	developer_tools	km	បញ្ជីការផ្លាស់ប្តូរ
+load	developer_tools	km	ផ្ទុក
+loading source langfile	developer_tools	km	កំពុងផ្ទុកប្រភព langfile
+loading target langfile	developer_tools	km	កំពុងផ្ទុកឯកសារ langfile គោលដៅ
+loads the selected lang-files, to be modified in the next steps	developer_tools	km	ផ្ទុកឯកសារ lang-files ដែលបានជ្រើសរើសដើម្បីកែប្រែក្នុងជំហានបន្ទាប់
+message	developer_tools	km	សារ
+message_id in english	developer_tools	km	message_id ជាភាសាអង់គ្លេស
+no file	developer_tools	km	គ្មានឯកសារ
+ok	developer_tools	km	យល់ព្រម
+original	developer_tools	km	ដើម
+phrase in english (or empty if identical)	developer_tools	km	ឃ្លាជាភាសាអង់គ្លេស ឬទទេប្រសិនបើដូចគ្នាបេះបិទ
+preferences	developer_tools	km	ចំណូលចិត្ត
+preferences have been updated	developer_tools	km	ចំណូលចិត្តត្រូវបានធ្វើបច្ចុប្បន្នភាព។
+project	developer_tools	km	គម្រោង
+remove	developer_tools	km	ដកចេញ
+removed %1 phrases from the target language, as they are not present in the source language!	developer_tools	km	បានដកឃ្លា % 1 ចេញពីភាសាគោលដៅ ដោយសារវាមិនមាននៅក្នុងភាសាប្រភព!
+returns to the application list, not saved changes get lost !!!	developer_tools	km	ត្រឡប់​ទៅ​បញ្ជី​កម្មវិធី​វិញ ការ​ផ្លាស់ប្ដូរ​ដែល​មិន​បាន​រក្សា​ទុក​នឹង​បាត់បង់!
+revert	developer_tools	km	ត្រឡប់
+saves the added/changed translations to an internal buffer, to be used in further steps	developer_tools	km	រក្សាទុកការបកប្រែដែលបានបន្ថែម/ផ្លាស់ប្តូរទៅជាសតិបណ្ដោះអាសន្នខាងក្នុង ដើម្បីប្រើប្រាស់ក្នុងជំហានបន្ថែម
+search changelogs	developer_tools	km	ស្វែងរកការផ្លាស់ប្តូរ
+search for missing phrase	developer_tools	km	ស្វែងរកឃ្លាដែលបាត់
+search new phrases	developer_tools	km	ស្វែងរកឃ្លាថ្មីៗ
+searches the source-code for phrases not in the actual source-lang-file	developer_tools	km	ស្វែងរកកូដប្រភពសម្រាប់ឃ្លាដែលមិនមាននៅក្នុងឯកសារប្រភពពិតប្រាកដ
+select project	developer_tools	km	ជ្រើសរើសគម្រោង
+sf project tracker	developer_tools	km	កម្មវិធីតាមដានគម្រោង SF
+sf project tracker preferences	preferences	km	ចំណូលចិត្តកម្មវិធីតាមដានគម្រោង SF
+source language	developer_tools	km	ភាសាប្រភព
+sourceforge project id	developer_tools	km	លេខសម្គាល់គម្រោង Sourceforge
+sourceforge project tracker	developer_tools	km	កម្មវិធីតាមដានគម្រោង Sourceforge
+sourceforge project tracker preferences	developer_tools	km	ចំណូលចិត្តកម្មវិធីតាមដានគម្រោង Sourceforge
+step	developer_tools	km	ជំហាន
+submit	developer_tools	km	ដាក់ស្នើ
+target language	developer_tools	km	ភាសាគោលដៅ
+title	developer_tools	km	ចំណងជើង
+translate	developer_tools	km	បកប្រែ
+translation	developer_tools	km	ការបកប្រែ
+translation of phrase	developer_tools	km	ការបកប្រែឃ្លា
+update	developer_tools	km	ធ្វើបច្ចុប្បន្នភាព
+update database	developer_tools	km	ធ្វើបច្ចុប្បន្នភាពមូលដ្ឋានទិន្នន័យ
+updates the translations of both lang-files in your database, so you can verify your work immediately	developer_tools	km	ធ្វើបច្ចុប្បន្នភាពការបកប្រែឯកសារ lang ទាំងពីរនៅក្នុងមូលដ្ឋានទិន្នន័យរបស់អ្នក ដូច្នេះអ្នកអាចផ្ទៀងផ្ទាត់ការងាររបស់អ្នកបានភ្លាមៗ។
+version	developer_tools	km	កំណែ
+write	developer_tools	km	សរសេរ
+write the lang-file to the apps setup-dir	developer_tools	km	សរសេរឯកសារ lang ទៅកម្មវិធី setup-dir
+write to lang table	developer_tools	km	សរសេរទៅតារាង lang
+writing langfile for '%1' ...	developer_tools	km	កំពុងសរសេរ langfile សម្រាប់ '%1'...
+you have to [save] every manual change in the above fields, before you can go to the next step !!!	developer_tools	km	អ្នកត្រូវតែ [រក្សាទុក] រាល់ការផ្លាស់ប្តូរដោយដៃនៅក្នុងវាលខាងលើ មុនពេលអ្នកអាចទៅជំហានបន្ទាប់!
+you must a version	developer_tools	km	អ្នកត្រូវតែមានកំណែមួយ។
+you must enter a change	developer_tools	km	អ្នកត្រូវតែបញ្ចូលការផ្លាស់ប្តូរ។
+you must select a project	developer_tools	km	អ្នកត្រូវតែជ្រើសរើសគម្រោង។
+you need to set your preferences for this app	developer_tools	km	អ្នកត្រូវកំណត់ចំណូលចិត្តរបស់អ្នកសម្រាប់កម្មវិធីនេះ!

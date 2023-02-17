@@ -30,6 +30,7 @@ done	developer_tools	fr	fait
 download	developer_tools	fr	Télécharger
 download the lang-file to be saved in the apps setup-dir	developer_tools	fr	Télécharger le fichier de langue pour qu'il soit enregistré dans le répertoire setup de l'application
 edit	developer_tools	fr	Editer
+etemplates mediadb	etemplate	fr	eTemplates MediaDB
 floatingpoint (-1.5 &lt;= x &lt;= 3.5)	etemplate	fr	Nombre décimal (-1.5 <= x <= 3.5)
 footer	etemplate	fr	Pied de page
 header	etemplate	fr	Entête
@@ -43,11 +44,14 @@ loading target langfile	developer_tools	fr	Charge le fichier de langue destinati
 loads the selected lang-files, to be modified in the next steps	developer_tools	fr	Charge les fichiers de langue sélectionnés afin qu'ils soient modifiés dans les prochaines étapes
 message	developer_tools	fr	Message
 message_id in english	developer_tools	fr	message_id en Anglais
+meta-type	etemplate	fr	Meta-type
+meta-type of the column	etemplate	fr	Meta-type de la colonne
 no file	developer_tools	fr	pas de fichier
 ok	developer_tools	fr	ok
 original	developer_tools	fr	Original
 part	etemplate	fr	Partie
 phrase in english (or empty if identical)	developer_tools	fr	Phrase en  Anglais (ou rien si identique)
+please use name, first name	etemplate	fr	Veuillez utiliser Nom, Prénom
 preferences	developer_tools	fr	Préférences
 preferences have been updated	developer_tools	fr	Les préférences ont été mises à jour
 project	developer_tools	fr	Projet
@@ -63,6 +67,7 @@ search for missing phrase	developer_tools	fr	Chercher les phrases manquantes
 search new phrases	developer_tools	fr	Rechercher les nouvelles phrases
 searches the source-code for phrases not in the actual source-lang-file	developer_tools	fr	Recherche dans le code source les phrases non présentes dans le fichier de langue source actuel
 select project	developer_tools	fr	Choisir un projet
+selection grouping	etemplate	fr	Regroupement de sélection
 sf project tracker	developer_tools	fr	traceur de projet SF
 sf project tracker preferences	preferences	fr	Préférences du traceur de projet SF
 source language	developer_tools	fr	Langue source
@@ -74,6 +79,7 @@ submit	developer_tools	fr	Soumettre
 target language	developer_tools	fr	Langue destination
 telefon	etemplate	fr	Téléphone
 test	etemplate	fr	Test
+text (&lt;= 10 chars, has to start with capital letter)	etemplate	fr	Texte (<= 10 caract., doit débuter avec une majuscule)
 this is a help message	etemplate	fr	Ceci est un message d'aide
 title	developer_tools	fr	Titre
 translate	developer_tools	fr	Traduire
