@@ -387,7 +387,7 @@ class db_tools
 		);
 		$new_version = explode('.',$content['version']);
 		$minor = count($new_version)-1;
-		$new_version[$minor] = sprintf('%03d',1+$new_version[$minor]);
+		$new_version[$minor] = sprintf('%03d',1+(int)$new_version[$minor]);
 		$content['new_version'] = implode('.',$new_version);
 
 		$tmpl = new etemplate('etemplate.db-tools.ask_save');
