@@ -172,7 +172,7 @@ class date_widget
 		if ($this->timeformat == '12' && $readonly && $value['H'] !== '')
 		{
 			$value['a'] = $value['H'] < 12 ? 'am' : 'pm';
-			$value['H'] = $value['H'] % 12 ?  $value['H'] % 12 : 12;	// no leading 0 and 0h => 12am
+			$value['H'] = (int)$value['H'] % 12 ? (int)$value['H'] % 12 : 12;    // no leading 0 and 0h => 12am
 			$timeformat += array(5 => 'a');
 		}
 		$format = preg_split('/[\\/.-]/',$this->dateformat);
@@ -273,7 +273,7 @@ class date_widget
 		);
 		$opts = array(
 			'H' => $this->timeformat == '12' ? ',0,12' : ',0,23,01',
-			'i' => $value['i'] % 5 || $options & 4 ? ',0,59,01' : ',0,59,05' // 5min steps, if ok with value
+			'i' => (int)$value['i'] % 5 || $options & 4 ? ',0,59,01' : ',0,59,05' // 5min steps, if ok with value
 		);
 		$help = array(
 			'Y' => 'Year',
