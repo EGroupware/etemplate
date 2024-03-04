@@ -7,15 +7,15 @@ application	developer_tools	tr	Uygulama
 back	developer_tools	tr	Geri
 cancel	developer_tools	tr	İptal
 change	developer_tools	tr	Değiştir
-changelog entry has been added	developer_tools	tr	Değişilik kütüğü girdisi yaratıldı
+changelog entry has been added	developer_tools	tr	Değişilik kütüğü girdisi yaratıldı.
 changelogs	developer_tools	tr	Değişiklik kütüğü
-clears the internal buffer, all changes made sofar are lost	developer_tools	tr	Dahili tamponu temizler, şimdiye dek yapılmış tüm değişiklikler kaybedilir.
+clears the internal buffer, all changes made sofar are lost	developer_tools	tr	Dahili tamponu temizler, şimdiye dek yapılmış tüm değişiklikler kaybedilir
 create new language file	developer_tools	tr	Yeni Dil Dosyası Oluştur
 create sgml file	developer_tools	tr	Yeni SGML dosyası
 developer tools - preferences	developer_tools	tr	Geliştirici Araçları - Seçenekler
 developer_tools	common	tr	Çeviri Araçları
 diary	developer_tools	tr	Günlük
-done	developer_tools	tr	tamam
+done	developer_tools	tr	Tamam
 download	developer_tools	tr	İndir
 download the lang-file to be saved in the apps setup-dir	developer_tools	tr	Uygulamanın kurulum dizinine kaydedilecek dil dosyasını indir
 edit	developer_tools	tr	Düzenle
@@ -28,15 +28,16 @@ loading target langfile	developer_tools	tr	Hedef dil dosyası yükleniyor
 loads the selected lang-files, to be modified in the next steps	developer_tools	tr	Sıradaki adımlarda düzenlenecek dil dosyalarını yükler
 message	developer_tools	tr	Mesaj
 message_id in english	developer_tools	tr	İngilizce Mesaj ID'si
-no file	developer_tools	tr	dosya yok
+no file	developer_tools	tr	Dosya yok
 ok	developer_tools	tr	Tamam
 original	developer_tools	tr	Orjinal
 phrase in english (or empty if identical)	developer_tools	tr	İfadenin İngilizcesi (aynı ise boş bırakınız)
 preferences	developer_tools	tr	Seçenekler
-preferences have been updated	developer_tools	tr	Seçenekler güncellendi
+preferences have been updated	developer_tools	tr	Seçenekler güncellendi.
 project	developer_tools	tr	Proje
 remove	developer_tools	tr	Kaldır
-returns to the application list, not saved changes get lost !!!	developer_tools	tr	Uygulama listesine geri dön, kaydedilmiş değişiklikler kaybedilecek !!!
+removed %1 phrases from the target language, as they are not present in the source language!	developer_tools	tr	Kaynak dilde bulunmadıkları için hedef dilden %1 ifadeleri kaldırıldı!
+returns to the application list, not saved changes get lost !!!	developer_tools	tr	Uygulama listesine geri dön, kaydedilmiş değişiklikler kaybedilecek!
 revert	developer_tools	tr	Eski durumuna getir
 saves the added/changed translations to an internal buffer, to be used in further steps	developer_tools	tr	İlerki adımlarda kullanılacak eklenmiş/değiştirilmiş çevirileri dahili tampona kaydeder.
 search changelogs	developer_tools	tr	Değişiklik kütüğünü ara
@@ -47,7 +48,7 @@ select project	developer_tools	tr	Proje seçiniz
 sf project tracker	developer_tools	tr	SF Proje İzleyicisi
 sf project tracker preferences	preferences	tr	SF proje izleyici seçenekleri
 source language	developer_tools	tr	Kaynak dil
-sourceforge project id	developer_tools	tr	Sourceforge proje id
+sourceforge project id	developer_tools	tr	Sourceforge proje ID
 sourceforge project tracker	developer_tools	tr	Sourceforge Proje İzleyicisi
 sourceforge project tracker preferences	developer_tools	tr	Sourceforge proje izleyici seçenekleri
 step	developer_tools	tr	Adım
@@ -65,8 +66,8 @@ write	developer_tools	tr	Yaz
 write the lang-file to the apps setup-dir	developer_tools	tr	Dil dosyasını uygulama kurulum dizinine yaz
 write to lang table	developer_tools	tr	Dil tablosuna yaz
 writing langfile for '%1' ...	developer_tools	tr	'%1' dil dosyası yazılıyor ...
-you have to [save] every manual change in the above fields, before you can go to the next step !!!	developer_tools	tr	Sıradaki adıma geçmeden yukarıdaki alanlardaki her manuel değişikliği [Kaydet]meniz gerekir.
+you have to [save] every manual change in the above fields, before you can go to the next step !!!	developer_tools	tr	Sıradaki adıma geçmeden yukarıdaki alanlardaki her manuel değişikliği [Kaydet]meniz gerekir!
 you must a version	developer_tools	tr	Bir sürüm girmelisiniz
-you must enter a change	developer_tools	tr	Bir değişiklik girmelisiniz
-you must select a project	developer_tools	tr	Bir proje seçmelisiniz
-you need to set your preferences for this app	developer_tools	tr	Bu uygulama için seçeneklerinizi ayarlamalısınız
+you must enter a change	developer_tools	tr	Bir değişiklik girmelisiniz.
+you must select a project	developer_tools	tr	Bir proje seçmelisiniz.
+you need to set your preferences for this app	developer_tools	tr	Bu uygulama için seçeneklerinizi ayarlamalısınız!
