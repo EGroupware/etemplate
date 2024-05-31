@@ -187,7 +187,7 @@ class solangfile
 	{
 		$matches = null;
 		if (($content = file_get_contents($fname)) &&
-			preg_match_all('#((<(label|description|et2-description)[^>]+value|label|statustext|blur)="([^"]+)"|<option[^>]*>(.*)</option>)#', $content, $matches, PREG_PATTERN_ORDER))
+			preg_match_all('#((<(label|description|et2-label|et2-description)[^>]+value|label|summary|placeholder|statustext|blur)="([^"]+)"|<option[^>]*>(.*)</option>)#', $content, $matches, PREG_PATTERN_ORDER))
 		{
 			foreach(array_diff(array_merge($matches[4], $matches[5]), ['']) as $label)
 			{
