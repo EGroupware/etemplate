@@ -158,7 +158,7 @@ class date_widget
 		else
 		{
 			// for the timeformats we use only seconds, no timezone conversation between server-time and UTC
-			if (substr($type,-4) == 'only' && is_numeric($value)) $value -= adodb_date('Z',0);
+			if (substr($type,-4) == 'only' && is_numeric($value)) $value -= date('Z',0);
 
 			$value = egw_time::to($value,'date_array');
 		}
@@ -225,15 +225,15 @@ class date_widget
 				{
 					if (!$n && $options & 16 )
 					{
-						$str = lang(adodb_date('l',adodb_mktime(12,0,0,$value['m'],$value['d'],$value['Y']))).' ';
+						$str = lang(date('l',mktime(12,0,0,$value['m'],$value['d'],$value['Y']))).' ';
 					}
 					if (!$n && $options & 32 )
 					{
-						$str = lang('Wk').adodb_date('W',adodb_mktime(12,0,0,$value['m'],$value['d'],$value['Y'])).' ';
+						$str = lang('Wk').date('W',mktime(12,0,0,$value['m'],$value['d'],$value['Y'])).' ';
 					}
 					if (!$n && $options & 64 )
 					{
-						$str = lang('Wk').adodb_date('W',adodb_mktime(12,0,0,$value['m'],$value['d'],$value['Y'])).' '.lang(adodb_date('l',adodb_mktime(12,0,0,$value['m'],$value['d'],$value['Y']))).' ';
+						$str = lang('Wk').date('W',mktime(12,0,0,$value['m'],$value['d'],$value['Y'])).' '.lang(date('l',mktime(12,0,0,$value['m'],$value['d'],$value['Y']))).' ';
 					}
 					$str .= ($str != '' ? $sep[$n] : '') .
 						(is_numeric($value[$format[$n]]) ? sprintf('%02d',$value[$format[$n]]) : $value[$format[$n]]);
@@ -327,7 +327,7 @@ class date_widget
 				$dcell['help'] = 'sets today as date';
 				$dcell['no_lang'] = True;
 				$dcell['needed'] = True;	// to get a button
-				$dcell['onchange'] = "this.form.elements['$name"."[Y]'].value='".adodb_date('Y')."'; this.form.elements['$name"."[m]'].value='".adodb_date('n')."';this.form.elements['$name"."[d]'].value='".(0+adodb_date('d'))."'; return false;";
+				$dcell['onchange'] = "this.form.elements['$name"."[Y]'].value='".date('Y')."'; this.form.elements['$name"."[m]'].value='".date('n')."';this.form.elements['$name"."[d]'].value='".(0+date('d'))."'; return false;";
 				$dcell['type'] = 'button';
 				$row[$tpl->num2chrs(++$i)] = &$dcell;
 				unset($dcell);
@@ -604,7 +604,7 @@ class date_widget
 			$set = array('Y','m','d');
 			foreach($set as $d)
 			{
-				$value[$d] = adodb_date($d);
+				$value[$d] = date($d);
 			}
 		}
 		if (isset($value_in['str']) && !empty($value_in['str']))
@@ -622,11 +622,11 @@ class date_widget
 			{
 				if (!$value['m'])
 				{
-					$value['m'] = adodb_date('m');
+					$value['m'] = date('m');
 				}
 				if (!$value['Y'])
 				{
-					$value['Y'] = adodb_date('Y');
+					$value['Y'] = date('Y');
 				}
 				elseif ($value['Y'] < 100)
 				{
@@ -649,7 +649,7 @@ class date_widget
 			{
 				// for time or hour format we use just seconds (and no timezone correction between server-time and UTC)
 				$value = $no_date ? 3600 * (int) $value['H'] + 60 * (int) $value['i'] :
-					adodb_mktime((int) $value['H'],(int) $value['i'],0,$value['m'],$value['d'],$value['Y']);
+					mktime((int) $value['H'],(int) $value['i'],0,$value['m'],$value['d'],$value['Y']);
 			}
 			else
 			{
