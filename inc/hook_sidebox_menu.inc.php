@@ -18,7 +18,7 @@ $file = Array(
 );
 if($GLOBALS['egw_info']['flags']['currentapp'] == 'etemplate')
 {
-	display_sidebox($appname,$menu_title,$file);
+	$GLOBALS['egw']->framework->sidebox($appname,$menu_title,$file);
 }
 $menu_title = lang('Documentation');
 $docs = $GLOBALS['egw_info']['server']['webserver_url'].'/etemplate/doc/';
@@ -49,5 +49,5 @@ $doc_file = Array(
 
 if($GLOBALS['egw_info']['flags']['currentapp'] == 'etemplate')
 {
-   display_sidebox($appname, $menu_title, $doc_file);
+   $GLOBALS['egw']->framework->sidebox($appname, $menu_title, $doc_file);
 }
