@@ -1662,7 +1662,7 @@ class etemplate extends boetemplate
 						$options=array();
 						foreach($sels as $key => $val)
 						{
-							# we want the key anyway, even if this allowes more values than wanted (the name/key of the optgroup if there is one,
+							# we want the key anyway, even if this allows more values than wanted (the name/key of the optgroup if there is one,
 							# the keys of the arrays in case you have key/value pair(s) as value for the value of your option ).
 							$options[$key]=$key;
 							if (is_array($val))

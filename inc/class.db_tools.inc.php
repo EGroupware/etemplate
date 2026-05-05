@@ -76,6 +76,7 @@ class db_tools
 		'int'		=> 'int',
 		'auto'		=> 'auto',
 		'blob'		=> 'blob',
+		'binary'    => 'binary',
 		'char'		=> 'char',
 		'date'		=> 'date',
 		'decimal'	=> 'decimal',
